@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Menu — Savora</title>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-wrap"><img src="logo.png" alt="Savora Logo" class="nav-logo"/></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html" class="cart-icon-wrap"><i class="fas fa-shopping-bag"></i><span class="cart-badge" id="cartBadge">0</span></a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Menu</p>
+    <span class="tag">Our Menu</span>
+    <h1>Explore Our <span class="gold">Delicious Menu</span></h1>
+    <p>Fresh, flavourful meals prepared daily. Browse by category and add to cart.</p>
+  </div>
+</section>
+
+<section class="menu-section">
+  <div class="container">
+    <div class="menu-filter" id="menuFilter">
+      <button class="filter-btn active" data-cat="all">All Items</button>
+      <button class="filter-btn" data-cat="rice">Rice & Stews</button>
+      <button class="filter-btn" data-cat="local">Local Dishes</button>
+      <button class="filter-btn" data-cat="grills">Grills</button>
+      <button class="filter-btn" data-cat="snacks">Snacks & Sides</button>
+      <button class="filter-btn" data-cat="drinks">Drinks</button>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="order-banner">
+  <div class="container">
+    <h2>Ready to <span class="gold">Order?</span></h2>
+    <p>Choose your preferred ordering method below</p>
+    <div class="channels-grid">
+      <a href="cart.html" class="channel-card channel-wa">
+        <i class="fab fa-whatsapp"></i><strong>WhatsApp</strong><span>Chat & order</span>
+      </a>
+      <a href="contact.html#order-form" class="channel-card channel-form">
+        <i class="fas fa-clipboard-list"></i><strong>Online Form</strong><span>Fill & submit</span>
+      </a>
+      <a href="contact.html#email" class="channel-card channel-email">
+        <i class="fas fa-envelope"></i><strong>Email</strong><span>Send your order</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Savora" class="footer-logo"/>
+      <p>Food, Your Way. Delivered.<br/>Serving Ghana with love and flavour.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="cart.html">Cart</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><i class="fab fa-whatsapp"></i> +233 [YOUR NUMBER]</li>
+        <li><i class="fas fa-envelope"></i> orders@savora.com</li>
+        <li><i class="fas fa-clock"></i> Mon–Sun: 8am–10pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Savora. All rights reserved.</p></div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+const grid = document.getElementById("menuGrid");
+const filterBtns = document.querySelectorAll(".filter-btn");
+let activeCategory = "all";
+
+function renderMenu(cat) {
+  const items = cat === "all" ? menuItems : menuItems.filter(m => m.category === cat);
+  if (!items.length) { grid.innerHTML = '<p class="empty-msg">No items in this category yet.</p>'; return; }
+  grid.innerHTML = items.map(item => buildFoodCard(item)).join("");
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeCategory = btn.dataset.cat;
+    renderMenu(activeCategory);
+  });
+});
+
+renderMenu("all");
+updateCartBadge();
+</script>
+</body>
+</html>

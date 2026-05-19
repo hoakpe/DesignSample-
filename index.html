@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Savora — Food, Your Way. Delivered.</title>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-wrap">
+      <img src="/images/logo.png" alt="Savora Logo" class="nav-logo"/>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a href="cart.html" class="cart-icon-wrap">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </a>
+      </li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-badge"><i class="fas fa-fire"></i> Ghana's Hottest Delivery</span>
+    <h1 class="hero-title">Delicious Food<br/><span class="gold">Straight to Your Door</span></h1>
+    <p class="hero-sub">From savoury jollof to smoky grills — experience restaurant-quality meals delivered lightning-fast across Ghana.</p>
+    <div class="hero-btns">
+      <a href="menu.html" class="btn-primary">Order Now <i class="fas fa-arrow-right"></i></a>
+      <a href="about.html" class="btn-ghost">Our Story</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>2,500+</strong><span>Happy Customers</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>50+</strong><span>Menu Items</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>30 mins</strong><span>Avg. Delivery</span></div>
+    </div>
+  </div>
+  <div class="hero-img-wrap">
+    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700&q=80" alt="Food" class="hero-food-img"/>
+    <div class="hero-float hero-float-1"><i class="fas fa-star"></i> 4.9 Rating</div>
+    <div class="hero-float hero-float-2"><i class="fas fa-bolt"></i> Fast Delivery</div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Simple Process</span>
+      <h2>Order in <span class="gold">3 Easy Steps</span></h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-icon"><i class="fas fa-utensils"></i></div>
+        <h3>Browse Menu</h3>
+        <p>Explore our mouth-watering selection of local and international dishes freshly prepared daily.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-icon"><i class="fas fa-shopping-cart"></i></div>
+        <h3>Add to Cart</h3>
+        <p>Pick your favourites, customise your order, and review everything in your cart before checkout.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-icon"><i class="fas fa-motorcycle"></i></div>
+        <h3>Get Delivered</h3>
+        <p>Order via WhatsApp, Email, or our online form. We'll confirm and deliver hot to your doorstep.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED MENU ===== -->
+<section class="featured-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Today's Picks</span>
+      <h2>Featured <span class="gold">Dishes</span></h2>
+    </div>
+    <div class="food-grid" id="featuredGrid"></div>
+    <div class="text-center mt-40">
+      <a href="menu.html" class="btn-primary">View Full Menu <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY SAVORA ===== -->
+<section class="why-section">
+  <div class="container why-inner">
+    <div class="why-text">
+      <span class="tag">Why Choose Us</span>
+      <h2>Food Made With <span class="gold">Love & Passion</span></h2>
+      <p>At Savora, every dish is crafted using the freshest local ingredients, inspired by the rich culinary culture of Ghana — blended with international flavours to create something truly unforgettable.</p>
+      <ul class="why-list">
+        <li><i class="fas fa-check-circle"></i> Freshly prepared — no frozen shortcuts</li>
+        <li><i class="fas fa-check-circle"></i> Multiple ordering channels for convenience</li>
+        <li><i class="fas fa-check-circle"></i> Hygienically packaged with care</li>
+        <li><i class="fas fa-check-circle"></i> Contactless delivery options available</li>
+        <li><i class="fas fa-check-circle"></i> Same-day delivery across our coverage zones</li>
+      </ul>
+      <a href="menu.html" class="btn-primary">Explore Menu <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="why-img-wrap">
+      <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80" alt="Fresh Food"/>
+      <div class="why-badge"><i class="fas fa-award"></i><span>Premium<br/>Quality</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="tag">Customer Love</span>
+      <h2>What People <span class="gold">Are Saying</span></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Savora's jollof rice is absolutely divine! Ordered on WhatsApp and it arrived within 25 minutes. Will definitely order again!"</p>
+        <div class="testi-author"><div class="testi-avatar">AK</div><div><strong>Ama Kumi</strong><span>Accra, Ghana</span></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Best grilled chicken I've had in Kumasi. The online order form was so easy to fill. My family loved every bite!"</p>
+        <div class="testi-author"><div class="testi-avatar">KB</div><div><strong>Kweku Boateng</strong><span>Kumasi, Ghana</span></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Professional service, delicious food, and the packaging was top-notch. Savora is our go-to for office lunch orders."</p>
+        <div class="testi-author"><div class="testi-avatar">EA</div><div><strong>Efua Asante</strong><span>Tema, Ghana</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ORDER CHANNELS BANNER ===== -->
+<section class="order-banner">
+  <div class="container">
+    <h2>Multiple Ways to <span class="gold">Place Your Order</span></h2>
+    <p>Choose whichever method is most convenient for you!</p>
+    <div class="channels-grid">
+      <a href="cart.html" class="channel-card channel-wa">
+        <i class="fab fa-whatsapp"></i>
+        <strong>WhatsApp</strong>
+        <span>Tap to order via chat</span>
+      </a>
+      <a href="contact.html#order-form" class="channel-card channel-form">
+        <i class="fas fa-clipboard-list"></i>
+        <strong>Online Form</strong>
+        <span>Fill our order form</span>
+      </a>
+      <a href="contact.html#email" class="channel-card channel-email">
+        <i class="fas fa-envelope"></i>
+        <strong>Email Order</strong>
+        <span>Send us your order</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Savora" class="footer-logo"/>
+      <p>Food, Your Way. Delivered.<br/>Serving Ghana with love and flavour.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Order Channels</h4>
+      <ul>
+        <li><a href="cart.html"><i class="fab fa-whatsapp"></i> WhatsApp Order</a></li>
+        <li><a href="contact.html#order-form"><i class="fas fa-clipboard-list"></i> Online Form</a></li>
+        <li><a href="contact.html#email"><i class="fas fa-envelope"></i> Email Order</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="fab fa-whatsapp"></i> +233 [YOUR NUMBER]</li>
+        <li><i class="fab fa-whatsapp"></i> +233 [YOUR NUMBER 2]</li>
+        <li><i class="fas fa-envelope"></i> orders@savora.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> Ghana</li>
+        <li><i class="fas fa-clock"></i> Mon–Sun: 8am – 10pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Savora. All rights reserved. | Designed with <i class="fas fa-heart" style="color:#f5a623"></i> for Ghana</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+// Render featured items (first 6)
+const grid = document.getElementById('featuredGrid');
+const featured = menuItems.slice(0,6);
+featured.forEach(item => {
+  grid.innerHTML += buildFoodCard(item);
+});
+updateCartBadge();
+</script>
+</body>
+</html>
